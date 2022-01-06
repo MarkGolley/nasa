@@ -1,6 +1,8 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 
+import styles from "./Search.module.css";
+
 const Search = ({ setEndYear, setStartYear }) => {
   const StartRange = () => {
     const [startDate, setStartDate] = useState();
@@ -17,6 +19,7 @@ const Search = ({ setEndYear, setStartYear }) => {
     const [endDate, setEndDate] = useState();
     return (
       <DatePicker
+        wrapperClassName="datePicker"
         selected={endDate}
         onChange={(date) => setEndDate(date)}
         showYearPicker
@@ -42,9 +45,11 @@ const Search = ({ setEndYear, setStartYear }) => {
         range to analyse.
       </p>
       <form onSubmit={handleSubmit}>
-        <label>Start range:{StartRange()}</label>
+        <label className={styles.entry}>Start range:{StartRange()}</label>
         <label>End range:{EndRange()}</label>
-        <button type="submit">Begin Search</button>
+        <button className={styles.submit} type="submit">
+          Begin Search
+        </button>
       </form>
       {console.log()}
     </div>

@@ -9,23 +9,8 @@ const chartEvents = [
     },
   },
 ];
-const data = [
-  ["year", "count"],
-  [2012, 0],
-  [2013, 5.5],
-  [2014, 14],
-  [2015, 5],
-  [2016, 3.5],
-  [2017, 7],
-];
 
-const options = {
-  title: "Meteorites identified per year",
-  hAxis: { title: "Year", viewWindow: { min: 2012, max: 2017 } },
-  vAxis: { title: "Count", viewWindow: { min: 0, max: 15 } },
-  legend: "none",
-};
-const ExampleChart = () => {
+const ExampleChart = (data, options) => {
   return (
     <Chart
       chartType="LineChart"

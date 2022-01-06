@@ -1,0 +1,7 @@
+.header {
+  font-weight: bold;
+  border: black;
+  border-top: 10px;
+  border-radius: 10px;
+  border-style: solid;
+}
